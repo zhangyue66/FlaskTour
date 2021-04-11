@@ -5,4 +5,8 @@ app = Flask(__name__)
 def yuezhang():
     return "this is yue zhang first flask!"
 
-app.run()
+@app.route("/yz")
+def yz():
+    return "this is 2nd website"
+
+app.run(host=None,port=8080)
