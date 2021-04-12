@@ -1,6 +1,6 @@
 from flask import Flask
 app = Flask(__name__)
-
+print(app.config)
 @app.route("/")
 def yuezhang():
     return "this is yue zhang first flask!"
