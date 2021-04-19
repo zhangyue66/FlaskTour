@@ -5,5 +5,9 @@ app = Flask(__name__)
 def hello_word():
     return "Hello World!"
 
-if __name__ == "main":
+def index():
+    return "This is index!"
+app.add_url_rule("/index",view_func=index)
+
+if __name__ == "__main__":
     app.run()

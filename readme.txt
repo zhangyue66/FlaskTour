@@ -14,7 +14,7 @@ app.config["ENV"] = "development"
 app.config["DEBUG"] = True
 
 解耦配置文件 settings.py
-app.config.from_files("settings.py")
+app.config.from_pyfile("settings.py")
 
 import settings
 app.config.from_objects(settings)
@@ -45,3 +45,43 @@ Date: Mon, 12 Apr 2021 08:40:37 GMT
 response body
 
 
+=========================================
+
+Day2
+
+1.路由
+
+192.168.1.10:8080
+@app.ruote("/")
+def index():
+    return "index!"
+
+怎么实现的？
+def route(self,rule,**options):
+    def decorator(f):
+        self.add_url_rule(rule,endpoint,f,**options)
+        return f
+    return decorator
+
+利用add_url_rule函数 将字符串和视图函数绑定一起
+
+变量规则 variable rules -》https://flask.palletsprojects.com/en/1.1.x/quickstart/#variable-rules
+string
+
+(default) accepts any text without a slash
+
+int
+
+accepts positive integers
+
+float
+
+accepts positive floating point values
+
+path
+
+like string but also accepts slashes
+
+uuid
+
+accepts UUID strings
