@@ -66,22 +66,11 @@ def route(self,rule,**options):
 利用add_url_rule函数 将字符串和视图函数绑定一起
 
 变量规则 variable rules -》https://flask.palletsprojects.com/en/1.1.x/quickstart/#variable-rules
-string
+string *
+int *
+float *
+path *
+uuid *
+accepts UUID strings -> import uuid ;id=uuid.uuid4()
 
-(default) accepts any text without a slash
-
-int
-
-accepts positive integers
-
-float
-
-accepts positive floating point values
-
-path
-
-like string but also accepts slashes
-
-uuid
-
-accepts UUID strings
+- URL重定向问题
