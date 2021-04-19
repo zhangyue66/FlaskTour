@@ -14,6 +14,11 @@ app.config["ENV"] = "development"
 app.config["DEBUG"] = True
 
 解耦配置文件 settings.py
+app.config.from_files("settings.py")
+
+import settings
+app.config.from_objects(settings)
+
 #flask 配置文件
 ENV = "development"
 DEBUG = True
