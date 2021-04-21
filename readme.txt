@@ -74,3 +74,8 @@ uuid *
 accepts UUID strings -> import uuid ;id=uuid.uuid4()
 
 - URL重定向问题
+
+/projects/ vs /projects
+
+
+2.视图
