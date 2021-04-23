@@ -7,7 +7,10 @@ app.config.from_object(settings)
 @app.route("/index")
 def hello_word():
     #make_response()
-    print(request.headers)
+    print(request.headers) #对象 实例 可以访问属性 方法
+    print(request.path)
+    print(request.base_url)
+    print(request.url)
     """
     Host: 127.0.0.1:5000
     Connection: keep-alive
