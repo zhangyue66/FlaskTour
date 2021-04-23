@@ -79,3 +79,6 @@ accepts UUID strings -> import uuid ;id=uuid.uuid4()
 
 
 2.视图
+
+render_template()
+Flask初始化 在__init__()函数中设定了模板的路径
